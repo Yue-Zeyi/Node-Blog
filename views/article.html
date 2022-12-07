@@ -1,0 +1,81 @@
+<%- include('header.html') -%>
+
+    <div class="flex-1 flex justify-center p-4">
+        <div class="max-w-4xl">
+            <div class="space-y-4 group px-4 py-1">
+                <p class="list-p">
+                    <a href="/">首页</a> &raquo;
+                    <a href="/article/list/<%=article.category_id%>">
+                        <%=article.name%>
+                    </a>&raquo;
+                    <strong>
+                        <%=article.title%>
+                    </strong>
+                </p>
+            </div>
+            <div class="space-y-4 prose group px-4 py-4">
+                <!-- <h1 class="block font-bold text-xl text-gray-700 text-gray-700 group-hover:text-gray-900 ">
+                    <%=article.title%>
+                </h1> -->
+                <div class="space-y-4 prose prose-indigo my-4">
+                    <%-article.content%>
+                </div>
+                <div class="text-center my-8  p-4">
+                    <time class="block text-gray-500 text-sm">
+                        发表于 <%=article.time.toLocaleString()%>
+                    </time>
+                </div>
+            </div>
+            <div class="space-y-4 prose-indigo my-4">
+                <div class="card-footer bg-white border-0">
+                    <% tabs.forEach(tab=> { %>
+                        <span class="badge badge-pill">
+                            <%=tab.name%>
+                        </span>
+                        <% }) %>
+                </div>
+            </div>
+            <ol class="comment-list">
+                <div class="rounded px-4">
+                    <% if (prev) { %>
+                        <div class="border rounded p-4 m-4 mx-auto rounded-xl overflow-hidden  " style="width: 20rem;">
+                            <div class="md:flex">
+                                <div class="flex flex-col px-4">
+                                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                                        <a href="/article/<%=prev.id%>" rel="external nofollow">上一篇</a>
+                                    </div>
+                                    <div class="flex-1 flex items-center mt-1 text-gray-500">
+                                        <p>
+                                            <%=prev.title%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+
+                <div class="rounded px-4">
+                    <% if (next) { %>
+                        <div class="border rounded p-4 m-4 mx-auto rounded-xl overflow-hidden" style="width: 20rem;">
+                            <div class="md:flex">
+
+                                <div class="flex flex-col px-4">
+                                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                                        <a href="/article/<%=next.id%>" rel="external nofollow">下一篇</a>
+                                    </div>
+
+                                    <div class="flex-1 flex items-center mt-1 text-gray-500">
+                                        <p>
+                                            <%=next.title%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </ol>
+        </div>
+    </div>
+    <%- include('footer.html') -%>

@@ -1,0 +1,41 @@
+<%- include('header.html') -%>
+
+    <div class="flex-1 flex justify-center p-4">
+
+        <div class="max-w-4xl">
+            <div class="space-y-4 group px-4 py-1">
+                <p class="list-p">当前位置：<a href="/">首页</a> &raquo; <%=category.name%>
+                </p>
+
+            </div>
+            <div class="space-y-4">
+                <% articles.forEach(article=> { %>
+                    <div class="space-y-4 group px-4 py-6">
+                        <a href="/article/<%=article.id%>" class="block space-y-4">
+                            <h1 class="block font-bold text-xl text-gray-700 text-gray-700 group-hover:text-gray-900">
+                                <%= article.title %>
+                            </h1>
+
+                            <article class="text-gray-500 group-hover:text-gray-700">
+                                <%= article.content.replace(/<[^>]+>/g,'').substring(0,100) %>
+                            </article>
+                        </a>
+
+                        <div class="flex space-x-4 text-gray-400 text-sm">
+                            <div class="flex items-center">
+                                <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+
+                                <%= article.time.toLocaleString() %>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer.html') -%>

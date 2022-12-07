@@ -1,0 +1,4 @@
+.DS_Store
+.idea
+node_modules
+# config.js 这个文件我这里就不加添进来，要上传到 github

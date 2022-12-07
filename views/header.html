@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBLog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<header class="header">
+    <nav class="navbar flex items-center justify-between max-w-4xl px-4 py-2 mx-auto">
+        <a href="/"
+            class="nav-logo  font-bold text-xl uppercase select-none text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-500">
+            岳泽以
+        </a>
+        <ul class="nav-menu nav-menu">
+            <li class="nav-item">
+                <a href="/"
+                    class="flex items-center px-4 py-2 rounded select-none  hover:bg-gray-100 outline-none text-sm focus:outline-none ease-linear transition-colors">首页</a>
+            </li>
+
+            <% categories.forEach(category=> { %>
+                <li class="nav-item">
+                    <a href="/article/list/<%=category.id%>"
+                        class="flex items-center px-4 py-2 rounded select-none  hover:bg-gray-100 outline-none text-sm focus:outline-none ease-linear transition-colors">
+                        <%= category.name %>
+                    </a>
+                </li>
+                <% }) %>
+
+                    <li class="nav-item">
+                        <a href="/link"
+                            class="flex items-center px-4 py-2 rounded select-none  hover:bg-gray-100 outline-none text-sm focus:outline-none ease-linear transition-colors">友人</a>
+                    </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+<body>

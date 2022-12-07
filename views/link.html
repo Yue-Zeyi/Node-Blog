@@ -1,0 +1,222 @@
+<%- include('header.html') -%>
+  <style>
+    .post-lists {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+
+    .post-list-item {
+      float: left;
+      width: 33.3333%;
+      height: auto;
+      padding: 15px;
+      align-items: center;
+    }
+
+    .post-list-item .item-title {
+      font-size: 18px;
+    }
+
+    .post-list-item a {
+      color: #fff;
+      border-bottom: 0px solid #00000070;
+    }
+
+    .post-list-item-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      border-radius: 3px;
+      background-color: #fff;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    }
+
+    .post-list-item-container .item-label {
+      position: relative;
+      height: 130px;
+      padding: 25px 20px 40px;
+      background-color: #fff;
+    }
+
+    .post-list-item-container .item-label.bg-purple .item-title a {
+      color: #fff;
+    }
+
+    .post-list-item-container .item-label .item-meta {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 0 15px 15px;
+      text-align: right;
+    }
+
+    .post-list-item-container .item-label .item-meta .item-meta-ico {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #eaeaea;
+      border-radius: 50%;
+    }
+
+    .post-list-item-container .item-label.bg-purple .item-meta .item-meta-date {
+      color: #fff;
+    }
+
+    .post-list-item-container .item-label .item-meta .item-meta-date {
+      font-size: 12px;
+      position: relative;
+      float: left;
+      padding-left: 5px;
+      text-align: left;
+      text-transform: none;
+      color: #f1f1f1;
+      max-width: 75%;
+    }
+
+    .bg-purple {
+      background-color: #bc99c4 !important;
+    }
+
+    .bg-yellow {
+      background-color: #f9bb3c !important;
+    }
+
+    .bg-orange {
+      background-color: #f68e5f !important;
+    }
+
+    .bg-red {
+      background-color: #e8583d !important;
+    }
+
+    .bg-green {
+      background-color: #46c47c !important;
+    }
+
+    .bg-blue {
+      background-color: #6fa3ef !important;
+    }
+
+    .bg-grey {
+      background-color: #f7f7f7 !important;
+    }
+
+    .bg-deepgrey {
+      background-color: rgba(0, 0, 0, .5) !important;
+    }
+
+    .bg-white {
+      background-color: #fff !important;
+    }
+
+    .margin-center {
+      margin: 0 auto;
+      display: table;
+    }
+
+    @media (max-width: 480px) {
+
+      /*.post-list-item{width:100%}*/
+      .post-list-item .item-meta-date {
+        display: none;
+      }
+
+      .post-list-item-container .item-label .item-meta .item-meta-ico {
+        display: block;
+        float: inherit;
+        margin: 0 auto;
+      }
+
+      .post-list-item .item-title {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .post-list-item {
+        width: 50%
+      }
+    }
+
+    /*@media (min-width: 800px){*/
+    /*    .post-list-item{width:33.33333%}*/
+    /*}*/
+  </style>
+  <div class="flex-1 flex justify-center p-4">
+    <div class="max-w-4xl">
+      <div class="prose prose-indigo mx-auto my-4">
+        <h1 class="text-center">友人账</h1>
+        <time class="block margin-center" datetime="2022-09-10T09:46:00+08:00" itemprop="datePublished">
+          更新于 2022 年 09 月 10 日 </time>
+      </div>
+      <div class="post-lists">
+        <div class="post-lists-body" id="flinksH">
+          <div>
+            <style></style>
+          </div>
+
+          <ul id="flinks" style="display: none;">
+            <li>岳泽以</li>
+            <li>https://www.yuezeyi.com/</li>
+            <li>https://pic.zeyiwl.cn/yunimg/20220102174507.jpg</li>
+            <li>独立个人博客网站</li>
+
+            <li>岳泽以</li>
+            <li>https://www.yuezeyi.com/</li>
+            <li>https://pic.zeyiwl.cn/yunimg/20220102174507.jpg</li>
+            <li>独立个人博客网站</li>
+
+            <li>岳泽以</li>
+            <li>https://www.yuezeyi.com/</li>
+            <li>https://pic.zeyiwl.cn/yunimg/20220102174507.jpg</li>
+            <li>独立个人博客网站</li>
+
+            <li>岳泽以</li>
+            <li>https://www.yuezeyi.com/</li>
+            <li>https://pic.zeyiwl.cn/yunimg/20220102174507.jpg</li>
+            <li>独立个人博客网站</li>
+
+            <li>岳泽以</li>
+            <li>https://www.yuezeyi.com/</li>
+            <li>https://pic.zeyiwl.cn/yunimg/20220102174507.jpg</li>
+            <li>独立个人博客网站</li>
+
+            <li>岳泽以</li>
+            <li>https://www.yuezeyi.com/</li>
+            <li>https://pic.zeyiwl.cn/yunimg/20220102174507.jpg</li>
+            <li>独立个人博客网站</li>
+          </ul>
+          <script>
+            (function () {
+              let a = document.getElementById("flinks");
+              if (a) {
+                let ns = a.querySelectorAll("li");
+                let nsl = ns.length;
+                console.log(nsl);
+                let str = '<div class="post-lists"><div class="post-lists-body" id ="flinksH">';
+                let bgid = 0;
+                const bgs = ["bg-blue", "bg-purple", "bg-green", "bg-yellow", "bg-red", "bg-orange"];
+                for (let i = 0; i <= nsl - 4; i += 4) {
+                  bgid = Math.floor(Math.random() * 6);
+                  str += (`<div class="post-list-item"><div class="post-list-item-container "><div class="item-label ${bgs[bgid]}"><div class="item-title"><a target="_blank" href="${ns[i + 1].innerText}">${ns[i].innerText}</a></div><div class="item-meta clearfix"><div class="item-meta-ico bg-ico-book"style="background: url(${ns[i + 2].innerText}) no-repeat;background-size: 40px auto;"></div><div class="item-meta-date">${ns[i + 3].innerText}</div></div></div></div></div>`);
+                }
+                str += '</div></div><style></style>';
+                let n1 = document.createElement("div");
+                n1.innerHTML = str;
+                a.parentNode.insertBefore(n1, a);
+                a.style = "display: none;";
+              } else {
+                console.log('No such id "flinksH"');
+              }
+            }())
+          </script>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <%- include('footer.html') -%>
